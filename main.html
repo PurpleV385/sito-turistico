@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appartamento Turistico sul lago di garda</title>
+    <title>Appartamento Turistico</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css">
-    <link rel="shortcut icon" href="./Immagini sito/logo.png" type = "image/x-icon">
+    <link rel="shortcut icon" href="./Immagini sito/logo.png" type="image/x-icon">
 
 </head>
+
 <body>
     <header>
         <div class="logo-container">
-            <img class = "logo" src="./Immagini sito/logo.png" alt="cont">
+            <img class="logo" src="./Immagini sito/logo.png" alt="cont">
         </div>
         <div class="info-wrapper">
             <div class="info-icons">
-                <i class="fa-solid fa-phone"></i>
-                <a id = "email" href="mailto:ViaVerdi2021@gmail.com?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email"><i class="fa-regular fa-envelope"></i></a>
+                <i id="phone-icon" class="fa-solid fa-phone"></i>
+                <a id="email"
+                    href="mailto:ViaVerdi2021@gmail.com?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email"><i
+                        id="mail-icon" class="fa-regular fa-envelope"></i></a>
                 <a id="gallery" href="galleria.html">
                     <i id="gallery-icon" class="fa-regular fa-images"></i>
                 </a>
@@ -28,36 +32,25 @@
         </div>
     </header>
     <main>
-       <div class="intro-container">
-        <div class="image-container">
-            <button class="arrow-btn" type="button">
-                <i class="fa-solid fa-angles-left"></i>
-            </button>
-            <div class="slides">
-                <img src="Immagini sito/WhatsApp Image 2021-06-13 at 14.22.42 (1).jpeg" alt="" class="immagine">
+        <div id="welcome">
+            <div id="welcome-img-container">
+                <img id="picture" src="Immagini sito/Campagna_1.jpeg" alt="">
             </div>
-            <button class="arrow-btn" type="button">
-                <i class="fa-solid fa-angles-right"></i>
-            </button>
-        </div>
-        <div class="description-container">
-            <div id="description-title">
-                <h2>Appartamento Turistico</h2>
-            </div>
-            <div class = "breve-descrizione">
-                <ul>
-                    <li>Luminosa mansarda immersa nel verde dei vigneti di Vigne</li>
-                    <li>A 15 minuti a piedi dal centro di Arco e a 5 km dal lago di Garda.</li>
-                    <li>Posizione ideale per chi ama tutti gli sport all'aria aperta.</li>
-                    <li>L'appartamento è dotato di garage privato.</li>
-                    <li>A disposizione degli ospiti biancheria da bagno, da letto, da cucina e 4 biciclette</li>
-                </ul>
+            <div id="first-description-container">
+                <div id="title-container">
+                    <h1 id="first-description">VIA VERDI 9</h1>
+                </div>
+                <div id="first-description-container">
+                    <span id="first-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora natus perferendis facere
+                        accusantium dignissimos blanditiis aut accusamus itaque, deserunt similique animi quo
+                        praesentium dolorem est non illo distinctio reiciendis cumque quam. Inventore quam eveniet
+                        architecto porro neque eum nemo doloremque! Fugit recusandae laborum ab deserunt?
+                    </span>
+                </div>
             </div>
         </div>
-       </div>
     </main>
-    <footer>
-    </footer>
     <script>
         import tippy from 'tippy.js';
         import 'tippy.js/dist/tippy.css'; // optional for styling
@@ -66,19 +59,39 @@
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script>
         tippy.setDefaultProps({
-          delay: [250, 50],
-          arrow: true,
-          followCursor: false,
-          placement: 'right',
-          theme: 'custom',
-          allowHTML: true,
+            delay: [250, 50],
+            arrow: true,
+            followCursor: false,
+            placement: 'bottom',
+            theme: 'custom',
+            allowHTML: true,
         });
-    
-        
+
+
         tippy('#gallery-icon', {
-          content: "Link per immagini",
+            content: "Galleria Immagini",
+        });
+        tippy('#mail-icon', {
+            content: "Contatto e-Mail",
+        });
+        tippy('#phone-icon', {
+            content: "Contatto Cellulare",
         });
     </script>
+    <script src="main.js"></script>
 </body>
+
 </html>
 
+
+<!--
+  <div class="section" id="intro">
+    <div class="image"></div>
+    <div class="description">
+      <h1>Title</h1>
+      <p>This is a short description of the content.</p>
+    </div>
+  </div>
+  <div class="section" id="content">
+    <p>This is the remaining content that should fade in when a certain point is reached.</p>
+  </div>-->
